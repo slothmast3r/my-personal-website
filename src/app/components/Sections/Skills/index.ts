@@ -1,1 +1,1 @@
-export {default as Skills} from "./Skills.tsx"
+export {default as Skills} from "./Skills"

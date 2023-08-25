@@ -1,1 +1,1 @@
-export {default as Services} from "./Services.tsx"
+export {default as Services} from "./Services"

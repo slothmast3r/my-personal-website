@@ -10,7 +10,7 @@ export default function HireMe(){
                 <div className="row justify-content-center">
                     <div className="col-md-7 text-center" data-aos="fade-up">
                         <h2>
-                            I'm <span>Available</span> for freelancing
+                            I&apos;m <span>Available</span> for freelancing
                         </h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit

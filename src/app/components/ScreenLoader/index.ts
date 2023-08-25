@@ -1,1 +1,1 @@
-export {default as ScreenLoader} from "./ScreenLoader.tsx"
+export {default as ScreenLoader} from "./ScreenLoader"

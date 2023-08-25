@@ -1,1 +1,1 @@
-export {default as PageFooter} from "./PageFooter.tsx"
+export {default as PageFooter} from "./PageFooter"

@@ -2,9 +2,9 @@
 import React, {ReactNode} from "react";
 import emailjs from "emailjs-com";
 import * as Yup from "yup";
-const emailjsServiceID = process.env.NEXT_EMAILJS_SERVICE_ID;
-const emailjsTemplateID = process.env.NEXT_EMAILJS_TEMPLATE_ID;
-const emailjsUserID = process.env.NEXT_EMAILJS_USER_ID;
+const emailjsServiceID = process.env.NEXT_EMAILJS_SERVICE_ID || "";
+const emailjsTemplateID = process.env.NEXT_EMAILJS_TEMPLATE_ID || "";
+const emailjsUserID = process.env.NEXT_EMAILJS_USER_ID || "";
 import { useFormik } from 'formik';
 import "./Contact.scss"
 interface ContactDetailProps {

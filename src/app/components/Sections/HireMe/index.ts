@@ -1,1 +1,1 @@
-export {default as HireMe} from "./HireMe.tsx"
+export {default as HireMe} from "./HireMe"

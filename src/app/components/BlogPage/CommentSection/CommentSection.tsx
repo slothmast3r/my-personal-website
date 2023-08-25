@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface CommentProps {
     imgSrc: string;
@@ -12,7 +13,7 @@ interface CommentProps {
 
 const Comment: React.FC<CommentProps> = ({
                                              imgSrc,
-                                             imgAlt = "Comment author image",
+                                             imgAlt = "Author's Profile Picture",
                                              author,
                                              date,
                                              content,
@@ -21,7 +22,7 @@ const Comment: React.FC<CommentProps> = ({
                                          }) => (
     <li className={`comment ${className ?? ''}`}>
         <div className="vcard bio">
-            <img src={imgSrc} alt={imgAlt} />
+            <Image src={imgSrc} alt={imgAlt} width={50} height={50} />  {/* Assuming 50x50 as dimensions */}
         </div>
         <div className="comment-body">
             <h3>{author}</h3>
@@ -63,7 +64,7 @@ const CommentForm: React.FC = () => (
 function countComments(children: React.ReactNode): number {
     let count = 0;
     React.Children.forEach(children, child => {
-        if (React.isValidElement(child) && child.type === Comment) {
+        if (React.isValidElement(child) && "isComment" in child.props) {
             count += 1;
             if (child.props.children) {
                 count += countComments(child.props.children);
@@ -76,25 +77,29 @@ function countComments(children: React.ReactNode): number {
 const CommentSection: React.FC = () => {
     const comments = [
         <Comment
-            imgSrc="images/person_1.jpg"
-            author="John Doe"
-            date="June 20, 2019 at 2:21pm"
-            content="Lorem ipsum..."
+                 imgSrc="/images/person_1.jpg"
+                 author="John Doe"
+                 date="June 20, 2019 at 2:21pm"
+                 content="Lorem ipsum..."
+                 key={3}
         />,
         <Comment
-            imgSrc="images/person_2.jpg"
-            author="Jane Doe"
-            date="June 21, 2019 at 1:11pm"
-            content="Another comment..."
+                 imgSrc="/images/person_2.jpg"
+                 author="Jane Doe"
+                 key={2}
+                 date="June 21, 2019 at 1:11pm"
+                 content="Another comment..."
         >
             <Comment
-                imgSrc="images/person_3.jpg"
-                author="James Doe"
-                date="June 22, 2019 at 12:15pm"
-                content="A nested comment..."
+                     imgSrc="/images/person_3.jpg"
+                     author="James Doe"
+                     key={1}
+                     date="June 22, 2019 at 12:15pm"
+                     content="A nested comment..."
             />
         </Comment>
     ];
+
 
     return (
         <div className="pt-5 mt-5">

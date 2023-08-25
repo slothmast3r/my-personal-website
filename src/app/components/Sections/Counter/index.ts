@@ -1,1 +1,1 @@
-export {default as Counter} from "./Counter.tsx"
+export {default as Counter} from "./Counter"
