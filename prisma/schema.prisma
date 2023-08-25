@@ -10,4 +10,4 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// model Blog {id String}
+// model Page {id String}

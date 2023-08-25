@@ -1,12 +1,12 @@
-import SideBar from "./SideBar/SideBar";
-import CommentSection from "./CommentSection/CommentSection";
-import AboutAuthor from "./AboutAuthor/AboutAuthor";
+import SideBar from "../components/BlogPage/SideBar/SideBar";
+import CommentSection from "../components/BlogPage/CommentSection/CommentSection";
+import AboutAuthor from "../components/BlogPage/AboutAuthor/AboutAuthor";
 import Image from "next/image";
 
-export default function BlogPage(){
+export default function Blog(){
 
     return(<div>
-        <section className="hero-wrap js-fullheight" style={{ backgroundImage: "url('images/bg_1.jpg')" }}>
+        <section className="hero-wrap js-fullheight" style={{ backgroundImage: "url('/images/bg_1.jpg')" }}>
             <div className="overlay"></div>
             <div className="container">
                 <div className="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -14,7 +14,7 @@ export default function BlogPage(){
                         <h1 className="mb-3 bread">Blog Single Post</h1>
                         <p className="breadcrumbs"><span className="mr-2">
                                 <a href="/">Home <i className="ion-ios-arrow-forward"></i>
-                                </a></span> <span className="mr-2"><a href="/blog">Blog
+                                </a></span> <span className="mr-2"><a href="/src/app/blog/blog/blog">Blog
                             <i className="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i className="ion-ios-arrow-forward"></i></span></p>
                     </div>
                 </div>
@@ -28,13 +28,13 @@ export default function BlogPage(){
                         <h2 className="mb-3">It is a long established fact a reader be distracted</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
                         <p>
-                            <Image src="images/image_3.jpg" alt="" className="img-fluid"/>
+                            <Image src="/images/image_3.jpg" width={500}  height={500} alt="Picture of the author" className="img-fluid"/>
                         </p>
                         <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
                         <h2 className="mb-3 mt-5">#2. Creative WordPress Themes</h2>
                         <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
                         <p>
-                            <Image src="images/image_4.jpg" alt="" className="img-fluid"/>
+                            <Image src="/images/image_4.jpg"  width={500} height={500} alt="Picture of the author" className="img-fluid"/>
                         </p>
                         <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
                         <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
@@ -50,7 +50,7 @@ export default function BlogPage(){
                         </div>
 
                         <AboutAuthor
-                            imageUrl="images/person_1.jpg"
+                            imageUrl="/images/person_1.jpg"
                             name="George Washington"
                             bio="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
 "

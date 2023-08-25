@@ -13,7 +13,7 @@ const menuItems: MenuItem[] = [
     { href: "#services", label: "Services" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
-    { href: "#blog", label: "My Blog" },
+    { href: "#blog", label: "My Page" },
     { href: "#contact", label: "Contact" },
 ];
 
