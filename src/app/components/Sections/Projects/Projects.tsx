@@ -17,14 +17,13 @@ function ProjectItem({ imageUrl, title, description }: { imageUrl: string, title
 
 
 export default function Projects() {
-
     const projectData = [
-        { colSize: "col-md-4", imageUrl: "images/project-4.jpg", title: "Branding & Illustration Design", description: "Web Design" },
-        { colSize: "col-md-8", imageUrl: "images/project-5.jpg", title: "Branding & Illustration Design", description: "Web Design" },
-        { colSize: "col-md-8", imageUrl: "images/project-1.jpg", title: "Branding & Illustration Design", description: "Web Design" },
-        { colSize: "col-md-4", imageUrl: "images/project-2.jpg", title: "Branding & Illustration Design", description: "Web Design" },
-        { colSize: "col-md-8", imageUrl: "images/project-6.jpg", title: "Branding & Illustration Design", description: "Web Design" },
-        { colSize: "col-md-4", imageUrl: "images/project-3.jpg", title: "Branding & Illustration Design", description: "Web Design" }
+        { colSize: "col-md-4", imageUrl: "/assets/images/project-4.jpg", title: "Branding & Illustration Design", description: "Web Design" },
+        { colSize: "col-md-8", imageUrl: "/assets/images/project-5.jpg", title: "Branding & Illustration Design", description: "Web Design" },
+        { colSize: "col-md-8", imageUrl: "/assets/images/project-1.jpg", title: "Branding & Illustration Design", description: "Web Design" },
+        { colSize: "col-md-4", imageUrl: "/assets/images/project-2.jpg", title: "Branding & Illustration Design", description: "Web Design" },
+        { colSize: "col-md-8", imageUrl: "/assets/images/project-6.jpg", title: "Branding & Illustration Design", description: "Web Design" },
+        { colSize: "col-md-4", imageUrl: "/assets/images/project-3.jpg", title: "Branding & Illustration Design", description: "Web Design" }
     ];
 
     return (

@@ -3,7 +3,7 @@ export default function HireMe(){
     return(
         <section
             className="ftco-section ftco-hireme img margin-top"
-            style={{ backgroundImage: "url('images/bg_1.jpg')" }}
+            style={{ backgroundImage: "url('/assets/images/bg_1.jpg')" }}
             id="hireme"
         >
             <div className="container">

@@ -83,7 +83,7 @@ export default function SideBar(){
     ];
 
     const blogPostsSample: BlogPostProps[] = [
-        { imageUrl: "images/image_1.jpg", title: "Why Lead Generation is Key", date: "March 12, 2019", author: "Admin", commentsCount: 19 },
+        { imageUrl: "/assets/images/image_1.jpg", title: "Why Lead Generation is Key", date: "March 12, 2019", author: "Admin", commentsCount: 19 },
         // ... other blog posts
     ];
 

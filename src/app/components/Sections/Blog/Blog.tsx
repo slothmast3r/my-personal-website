@@ -12,7 +12,7 @@ interface BlogEntryData {
 
 const blogEntries: BlogEntryData[] = [
     {
-        image: 'images/image_1.jpg',
+        image: '/assets/images/image_1.jpg',
         date: 'January 21, 2023',
         author: 'Admin',
         comments: 3,
@@ -21,7 +21,7 @@ const blogEntries: BlogEntryData[] = [
         link: 'blog'
     },
     {
-        image: 'images/image_2.jpg',
+        image: '/assets/images/image_2.jpg',
         date:  'January 21, 2023',
         author: 'Admin',
         comments: 3,
@@ -30,7 +30,7 @@ const blogEntries: BlogEntryData[] = [
         link: 'blog'
     },
     {
-        image: 'images/image_3.jpg',
+        image: '/assets/images/image_3.jpg',
         date:  'January 21, 2023',
         author: 'Admin',
         comments: 3,

@@ -77,21 +77,21 @@ function countComments(children: React.ReactNode): number {
 const CommentSection: React.FC = () => {
     const comments = [
         <Comment
-                 imgSrc="/images/person_1.jpg"
+                 imgSrc="/assets/images/person_1.jpg"
                  author="John Doe"
                  date="June 20, 2019 at 2:21pm"
                  content="Lorem ipsum..."
                  key={3}
         />,
         <Comment
-                 imgSrc="/images/person_2.jpg"
+                 imgSrc="/assets/images/person_2.jpg"
                  author="Jane Doe"
                  key={2}
                  date="June 21, 2019 at 1:11pm"
                  content="Another comment..."
         >
             <Comment
-                     imgSrc="/images/person_3.jpg"
+                     imgSrc="/assets/images/person_3.jpg"
                      author="James Doe"
                      key={1}
                      date="June 22, 2019 at 12:15pm"
