@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import './Navigation.scss';
+import Link from "next/link";
 
 interface MenuItem {
     href: string;
@@ -13,7 +14,7 @@ const menuItems: MenuItem[] = [
     { href: "#services", label: "Services" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
-    { href: "#blog", label: "My Page" },
+    { href: "#blog", label: "Blog" },
     { href: "#contact", label: "Contact" },
 ];
 
@@ -38,7 +39,11 @@ export default function Navigation() {
         setActiveHash(window.location.hash);
     }, []);
 
-    const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, pathname: string) => {
+        if (window.location.pathname !== pathname) {
+            // If it's a different page, let the default navigation happen.
+            return;
+        }
         e.preventDefault();
 
         // Find the target section
@@ -109,7 +114,7 @@ export default function Navigation() {
             className={`navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target ${navState.scrolled ? 'scrolled' : ''} ${navState.awake ? 'awake' : ''} ${navState.sleep ? 'sleep' : ''}`}
             id="ftco-navbar">
             <div className="container">
-                <a className="navbar-brand" href="/">Oskar</a>
+                <Link className="navbar-brand" href="/">Oskar</Link>
                 <button onClick={toggleBurgerMenu} className="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="oi oi-menu"></span> Menu
                 </button>
@@ -118,11 +123,11 @@ export default function Navigation() {
                     <ul className="navbar-nav nav ml-auto">
                         {menuItems.map(item => (
                             <li key={item.href} className="nav-item">
-                                <a href={item.href}
+                                <Link href={{pathname: "/", hash: item.href}}
                                    className={`nav-link ${item.href === activeHash ? 'active' : ''}`}
-                                   onClick={(e) => handleAnchorClick(e, item.href)}>
+                                   onClick={(e) => handleAnchorClick(e, item.href, `/`)}>
                                     <span>{item.label}</span>
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>

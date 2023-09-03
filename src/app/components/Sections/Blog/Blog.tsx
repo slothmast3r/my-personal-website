@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Blog.scss"
+import Link from "next/link";
 interface BlogEntryData {
     image: string;
     date: string;
@@ -8,6 +9,7 @@ interface BlogEntryData {
     title: string;
     description: string;
     link: string;
+    id: string
 }
 
 const blogEntries: BlogEntryData[] = [
@@ -18,7 +20,8 @@ const blogEntries: BlogEntryData[] = [
         comments: 3,
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        link: 'blog'
+        link: 'blog',
+        id: '1'
     },
     {
         image: '/assets/images/image_2.jpg',
@@ -27,7 +30,8 @@ const blogEntries: BlogEntryData[] = [
         comments: 3,
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        link: 'blog'
+        link: 'blog',
+        id: '2'
     },
     {
         image: '/assets/images/image_3.jpg',
@@ -36,12 +40,13 @@ const blogEntries: BlogEntryData[] = [
         comments: 3,
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        link: "blog"
+        link: "blog",
+        id: '3'
     }
 ];
 
 
-const BlogEntry: React.FC<BlogEntryData> = ({ image, date, author, comments, title, description, link }) => {
+const BlogEntry: React.FC<BlogEntryData> = ({ image, date, author, comments, title, description, link,id }) => {
     return (
         <div className="col-md-4 d-flex" data-aos="fade-up">
             <div className="blog-entry justify-content-end">
@@ -57,7 +62,8 @@ const BlogEntry: React.FC<BlogEntryData> = ({ image, date, author, comments, tit
                         </p>
                     </div>
                     <h3 className="heading">
-                        <a href={link}>{title}</a>
+                        <Link href={
+                            {pathname: `/${link}`,query: {id} }}> {title}</Link>
                     </h3>
                     <p>{description}</p>
                 </div>
