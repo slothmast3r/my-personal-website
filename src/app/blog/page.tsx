@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Blog(){
 
     return(<div>
-        <section className="hero-wrap js-fullheight" style={{ backgroundImage: "url('/images/bg_1.jpg')" }}>
+        <section className="hero-wrap js-fullheight" style={{ backgroundImage: "url('/assets/images/bg_1.jpg')" }}>
             <div className="overlay"></div>
             <div className="container">
                 <div className="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -25,6 +25,7 @@ export default function Blog(){
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 " data-aos="fade-up">
+                        <div>
                         <h2 className="mb-3">It is a long established fact a reader be distracted</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
                         <p>
@@ -40,6 +41,7 @@ export default function Blog(){
                         <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
                         <p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!</p>
                         <p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore?</p>
+                        </div>
                         <div className="tag-widget post-tag-container mb-5 mt-5">
                             <div className="tagcloud">
                                 <a href="#" className="tag-cloud-link">Life</a>

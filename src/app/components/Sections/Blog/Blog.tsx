@@ -50,7 +50,7 @@ const BlogEntry: React.FC<BlogEntryData> = ({ image, date, author, comments, tit
     return (
         <div className="col-md-4 d-flex" data-aos="fade-up">
             <div className="blog-entry justify-content-end">
-                <a href={link} className="block-20" style={{ backgroundImage: `url(${image})` }}></a>
+                <Link href={{pathname: `/${link}`,query: {id} }} className="block-20" style={{ backgroundImage: `url(${image})` }}></Link>
                 <div className="text mt-3 float-right d-block">
                     <div className="d-flex align-items-center mb-3 meta">
                         <p className="mb-0">
