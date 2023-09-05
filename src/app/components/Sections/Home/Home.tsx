@@ -22,7 +22,7 @@ export default function Home() {
 
     const slides = [
         {
-            backgroundImage: "url(https://placehold.co/500)",
+            backgroundImage: "url('/assets/images/imageOfMe.png')",
             greeting: "I'm",
             name: "Oskar Straszynski",
             description: "A Freelance Web Developer"

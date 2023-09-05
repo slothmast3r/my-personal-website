@@ -47,8 +47,7 @@ function HeadingSection() {
             <h1 className="big">About</h1>
             <h2 className="mb-4">About Me</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lorem lectus, porta sed blandit a, interdum eu nunc. Aliquam gravida, lectus vitae feugiat tincidunt, lorem massa ornare leo, in rhoncus sem tellus nec diam
-            </p>
+                I'm a Warsaw-based freelance Front-End Developer, specializing in crafting visually engaging and user-friendly websites. My expertise lies in HTML, CSS, and JavaScript, and I'm dedicated to delivering modern and responsive digital experiences that exceed client expectations. When I'm not coding, I'm exploring Warsaw's culture and drawing inspiration for my work.            </p>
         </div>
     );
 }
@@ -56,8 +55,8 @@ function HeadingSection() {
 function InfoList() {
     const info = [
         { label: "Name:", value: "Oskar Straszynski" },
-        { label: "Email:", value: "oskar.starszynski@gmail.com" },
-        { label: "Phone: ", value: "+1-2234-5678-9-0" }
+        { label: "Email:", value: "oskar@straszynski.pl" },
+        { label: "Phone: ", value: "+48 577 966 612" }
     ];
 
     return (
