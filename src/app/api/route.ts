@@ -11,7 +11,7 @@ export async function GET(request: Request) {
         include: {
             posts: true,
         },
-    })
+    })  
     return NextResponse.json
     (usersWithPosts)
 }
