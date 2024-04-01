@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,21 +7,54 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// model Page {id String}
-
 model User {
-  id    Int  @id @default(autoincrement())
-  email String  @unique
-  name  String?
-  posts Post[]
+  id             String    @id @default(uuid())
+  name           String
+  email          String    @unique
+  hashedPassword String
+  posts          Post[]
+  Comment        Comment[]
 }
 
 model Post {
-  id        Int  @id @default(autoincrement())
+  id        String    @id @default(uuid())
   title     String
   subtitle  String
   content   String?
-  published Boolean @default(false)
-  authorId  Int   @unique
-  author    User    @relation(fields: [authorId], references: [id])
+  published Boolean   @default(false)
+  authorId  String    @unique
+  author    User      @relation(fields: [authorId], references: [id])
+  Section   Section[]
+  Comment   Comment[]
+}
+
+model Section {
+  id      String         @id @default(uuid())
+  type    String
+  content Json?
+  postId  String
+  post    Post           @relation(fields: [postId], references: [id])
+  order   Int
+  Image   SectionImage[]
+}
+
+model SectionImage {
+  id        String   @id @default(uuid())
+  url       String
+  title     String?
+  sectionId String?
+  section   Section? @relation(fields: [sectionId], references: [id])
+}
+
+model Comment {
+  id        String    @id @default(uuid())
+  content   String
+  postId    String
+  post      Post      @relation(fields: [postId], references: [id])
+  authorId  String
+  author    User      @relation(fields: [authorId], references: [id])
+  parentId  String?   @map("commentId")
+  parent    Comment?  @relation("CommentReplies", fields: [parentId], references: [id])
+  replies   Comment[] @relation("CommentReplies")
+  createdAt DateTime  @default(now())
 }

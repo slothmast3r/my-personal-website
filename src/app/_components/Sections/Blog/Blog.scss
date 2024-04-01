@@ -1,0 +1,50 @@
+.blog-entry {
+  position: relative;
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 767.98px) {
+    margin-bottom: 30px;
+  }
+
+  .text {
+    width: 100%;
+    margin: 0 auto;
+
+    .heading {
+      font-size: 20px;
+      margin-bottom: 16px;
+      font-weight: 500;
+
+      a {
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: #ffbd39;
+        }
+      }
+    }
+  }
+
+  .meta {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    span,
+    a {
+      color: #ffbd39;
+    }
+
+    a:hover {
+      color: #ffbd39;
+    }
+  }
+}
