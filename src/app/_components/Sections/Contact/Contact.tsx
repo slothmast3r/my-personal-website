@@ -59,7 +59,7 @@ function Header() {
         <h1 className="big big-2">Contact</h1>
         <h2 className="mb-4">Contact Me</h2>
         <p>
-          Feel free to reach out if you're looking for collaboration,
+          Feel free to reach out if you&apos;re looking for collaboration,
           consultation or just have a question!
         </p>
       </div>

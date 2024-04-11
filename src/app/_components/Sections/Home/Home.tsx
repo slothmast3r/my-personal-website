@@ -23,7 +23,7 @@ export default function Home() {
   const slides = [
     {
       backgroundImage: "url('/me/me1.png')",
-      greeting: "I'm",
+      greeting: `I\'m`,
       name: "Oskar Straszynski",
       description: "A Freelance Web Developer",
     },
@@ -99,7 +99,7 @@ const Slide: React.FC<SlideProps> = ({ data }) => (
             </h1>
             <h2 className="mb-4">{data.description}</h2>
             <p>
-              <a href="#" className="btn btn-primary py-3 px-4">
+              <a href="#contact" className="btn btn-primary py-3 px-4">
                 Hire me
               </a>
               <a href="#" className="btn btn-white btn-outline-white py-3 px-4">

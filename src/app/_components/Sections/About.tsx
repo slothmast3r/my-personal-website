@@ -46,12 +46,12 @@ function HeadingSection() {
       <h1 className="big">About</h1>
       <h2 className="mb-4">About Me</h2>
       <p>
-        I'm a Warsaw-based freelance Front-End Developer, specializing in
+        I&apos;m a Warsaw-based freelance Front-End Developer, specializing in
         crafting visually engaging and user-friendly websites. My expertise lies
-        in HTML, CSS, and JavaScript, and I'm dedicated to delivering modern and
-        responsive digital experiences that exceed client expectations. When I'm
-        not coding, I'm exploring Warsaw's culture and drawing inspiration for
-        my work.{" "}
+        in HTML, CSS, and JavaScript, and I&apos;m dedicated to delivering
+        modern and responsive digital experiences that exceed client
+        expectations. When Im not coding, I&apos;m exploring Warsaw&apos;s
+        culture and drawing inspiration for my work.{" "}
       </p>
     </div>
   )

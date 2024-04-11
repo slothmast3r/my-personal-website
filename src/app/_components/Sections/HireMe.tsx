@@ -11,9 +11,9 @@ export default function HireMe() {
             <h2>
               I&apos;m <span>Available</span> for freelancing
             </h2>
-            <p>Don't hesitate to reach out!</p>
+            <p>Don&apos;t hesitate to reach out!</p>
             <p className="mb-0">
-              <a href="#" className="btn btn-primary py-3 px-5">
+              <a href="#contact" className="btn btn-primary py-3 px-5">
                 Hire me
               </a>
             </p>
