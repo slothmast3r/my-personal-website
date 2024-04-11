@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -31,7 +31,7 @@ model Post {
 model Section {
   id      String         @id @default(uuid())
   type    String
-  content Json?
+  content String?
   postId  String
   post    Post           @relation(fields: [postId], references: [id])
   order   Int
