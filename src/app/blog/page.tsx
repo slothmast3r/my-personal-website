@@ -7,12 +7,12 @@ export default function Blog() {
   return (
     <div>
       <section
-        className="hero-wrap js-fullheight"
+        className="hero-wrap h-screen"
         style={{ backgroundImage: "url('/assets/images/bg_1.jpg')" }}
       >
         <div className="overlay"></div>
         <div className="container">
-          <div className="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div className="row no-gutters slider-text h-screen align-items-end justify-content-center">
             <div className="col-md-12 ftco-animate pb-5 mb-3 text-center">
               <h1 className="mb-3 bread">Blog Single Post</h1>
               <p className="breadcrumbs">

@@ -12,22 +12,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
       easing: "ease",
     })
   }, [])
-  useEffect(() => {
-    const setFullHeight = () => {
-      const elements = document.querySelectorAll<HTMLElement>(".js-fullheight")
-      elements.forEach((element) => {
-        element.style.height = `${window.innerHeight}px`
-      })
-    }
 
-    setFullHeight() // Initial setting on component mount
-
-    window.addEventListener("resize", setFullHeight) // Update height on window resize
-
-    return () => {
-      window.removeEventListener("resize", setFullHeight) // Cleanup on component unmount
-    }
-  }, [])
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLoader(false)

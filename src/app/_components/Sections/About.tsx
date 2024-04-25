@@ -30,8 +30,8 @@ function ImageSection() {
 
 function DescriptionSection() {
   return (
-    <div className="col-md-6 col-lg-7 pl-lg-5 pb-5">
-      <div className="row justify-content-start pb-3">
+    <div className="col-md-6 col-lg-7 pl-lg-5 pb-10">
+      <div className="row justify-content-start pb-6">
         <HeadingSection />
         <InfoList />
       </div>
@@ -109,7 +109,7 @@ function CounterSection() {
                     <span>Project complete</span>
                 </p> */}
         <p>
-          <a href="#" className="btn btn-primary py-3 px-3">
+          <a href="/api/download" className="btn btn-primary py-3 px-3">
             Download CV
           </a>
         </p>

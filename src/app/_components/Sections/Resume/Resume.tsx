@@ -84,7 +84,7 @@ const Resume: React.FC = () => {
         <div className="row justify-content-center mt-5">
           <div className="col-md-6 text-center" data-aos="fade-up">
             <p>
-              <a href="#" className="btn btn-primary py-4 px-5">
+              <a href="/api/download" className="btn btn-primary py-4 px-5">
                 Download CV
               </a>
             </p>

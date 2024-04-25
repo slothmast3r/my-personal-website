@@ -82,7 +82,7 @@ const Slide: React.FC<SlideProps> = ({ data }) => (
         data-scrollax-parent="true"
       >
         <div
-          className="one-third js-fullheight order-md-last img"
+          className="one-third h-screen order-md-last bg-cover bg-no-repeat bg-center order-12"
           style={{ backgroundImage: data.backgroundImage }}
         >
           <div className="overlay"></div>
@@ -102,7 +102,10 @@ const Slide: React.FC<SlideProps> = ({ data }) => (
               <a href="#contact" className="btn btn-primary py-3 px-4">
                 Hire me
               </a>
-              <a href="#" className="btn btn-white btn-outline-white py-3 px-4">
+              <a
+                href="#projects"
+                className="btn btn-white btn-outline-white py-3 px-4"
+              >
                 My works
               </a>
             </p>
