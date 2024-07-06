@@ -14,11 +14,13 @@ interface SlideData {
 }
 interface SlideProps {
   data: SlideData
+  isMobile: Boolean
 }
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const sliderRef = useRef<Slider | null>(null)
+  const [isMobile, setIsMobile] = useState(false)
 
   const slides = [
     {
@@ -51,6 +53,19 @@ export default function Home() {
     }
   }, [currentSlide])
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+
+    handleResize() // Initial check
+    window.addEventListener("resize", handleResize) // Add event listener
+
+    return () => {
+      window.removeEventListener("resize", handleResize) // Cleanup on component unmount
+    }
+  }, [])
+
   const settings = {
     dots: false,
     infinite: true,
@@ -66,14 +81,14 @@ export default function Home() {
     <section id="home" className="hero">
       <Slider {...settings} className="home-slider owl-carousel">
         {slides.map((slide, index) => (
-          <Slide key={index} data={slide} />
+          <Slide key={index} data={slide} isMobile={isMobile} />
         ))}
       </Slider>
     </section>
   )
 }
 
-const Slide: React.FC<SlideProps> = ({ data }) => (
+const Slide: React.FC<SlideProps> = ({ data, isMobile }) => (
   <div className="slider-item">
     <div className="overlay"></div>
     <div className="container">
@@ -88,7 +103,7 @@ const Slide: React.FC<SlideProps> = ({ data }) => (
           <div className="overlay"></div>
         </div>
         <div
-          className="one-forth d-flex align-items-center"
+          className={`${isMobile ? "" : "one-forth"} d-flex align-items-center`}
           data-aos="fade-in"
           data-scrollax=" properties: { translateY: '70%' }"
         >

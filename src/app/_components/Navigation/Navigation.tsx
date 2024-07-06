@@ -136,7 +136,7 @@ export default function Navigation() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="oi oi-menu"></span> Menu
+          <span className="">Menu</span> 
         </button>
 
         <div
