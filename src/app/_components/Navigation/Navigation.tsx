@@ -140,7 +140,7 @@ export default function Navigation() {
         </button>
 
         <div
-          className={`navbar-collapse ${burgerMenuActive ? "show" : ""}`}
+          className={`navbar-collapse ${burgerMenuActive ? "show" : "hide"}`}
           id="ftco-nav"
         >
           <ul className="navbar-nav nav ml-auto">
